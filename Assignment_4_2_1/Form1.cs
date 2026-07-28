@@ -5,10 +5,19 @@ using System.Security.Policy;
 namespace Assignment_4_2_1
 {
 
+    
     public partial class Form1 : Form
     {
-        //private CalculatorBusinessLogic myCalcBL { get; set; } // apparently I need to instantiate these objects inside the functions... 
-        //private MyValidation myValidation { get; set; }
+        // This Form1 class contains the main functionality of our calculator App.
+        //
+        // It has two boolean values to indicate valid values, and two double values for conducting the calculation operations
+        // 
+        // There are two event handlers for when the Text values in two text boxes have been changed. If both values are
+        // validated as doubles, then DoCalculation is called, and the result fields automatically display the output.
+        //
+                    // // keeping these two lines for self-awareness/self-learning.
+                    //private CalculatorBusinessLogic myCalcBL { get; set; } // apparently I need to instantiate these objects inside the methods 
+                    //private MyValidation myValidation { get; set; }
         private bool IsOperand1Valid { get; set; }
         private bool IsOperand2Valid { get; set; }
         private double Operand1 { get; set; }
@@ -111,6 +120,7 @@ namespace Assignment_4_2_1
         //------------------------------
         private void ClearResults()
         {
+            // clear all results TextBox.Text fields
             txtSum.Text = string.Empty;
             txtDifference.Text = string.Empty;
             txtProduct.Text = string.Empty;

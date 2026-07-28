@@ -8,7 +8,8 @@ internal class MyValidation
     //
     // step 1. trim whitespace from textInput string
     // step 2. if string is only "-" minus, don't process it yet, pretend it's 0.0, return false
-    // step 3. run double.TryParse on the overall string, should work if "-4" and "-4.3" etc, return true
+    // step 3. run double.TryParse on the overall string, should work if entire number is valid,
+    //         so "-4" and "-4.3" etc, should return true
     
     public bool OperandValidated(string input, out double output)
     {

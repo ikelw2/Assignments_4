@@ -60,7 +60,7 @@ namespace Assignment_4_2_1.Models
             }
             else
             {
-                return (x % y).ToString();
+                return (x % y).ToString(); // use % operator, not myMath
             }
         }
         //------------------------------
@@ -73,7 +73,7 @@ namespace Assignment_4_2_1.Models
         {
             if ((y > 1.999999998) && (y < 2.000000001)) // only accept y == 2, to keep things simple
             {
-                return (Math.Sqrt(x)).ToString();
+                return (Math.Sqrt(x)).ToString(); // use Math.Sqrt method, not myMath
             }
             else
             {
