@@ -69,7 +69,7 @@
             txtOperand1.Size = new Size(100, 31);
             txtOperand1.TabIndex = 0;
             txtOperand1.TextAlign = HorizontalAlignment.Center;
-            txtOperand1.TextChanged += txtOperand1_TextChanged;
+            txtOperand1.TextChanged += txtOperand_TextChanged;
             // 
             // txtOperand2
             // 
@@ -80,7 +80,7 @@
             txtOperand2.Size = new Size(100, 31);
             txtOperand2.TabIndex = 1;
             txtOperand2.TextAlign = HorizontalAlignment.Center;
-            txtOperand2.TextChanged += txtOperand2_TextChanged;
+            txtOperand2.TextChanged += txtOperand_TextChanged;
             // 
             // chkSum
             // 
@@ -159,6 +159,7 @@
             txtSum.Size = new Size(100, 31);
             txtSum.TabIndex = 10;
             txtSum.TextAlign = HorizontalAlignment.Center;
+            txtSum.MouseClick += results_Click;
             // 
             // txtDifference
             // 
