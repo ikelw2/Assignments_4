@@ -29,23 +29,23 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
   - ✅"Student details" form: textbox StudentId, textbox FirstName, textbox LastName, textbox MonthOfAdmission, textbox Address (for individual student data), and dataGridView (for seeing multiple student data at once).
   - 🚩They will also be able to view student GPAs and click 'Get Highest GPA' button which 🚩saves to a output text file "HighestGPA.txt" (saved to working directory) the details of the student with the highest GPA.
   - ✅Select 'Add new' button to add a student, or 'Delete' button to delete student
-  - ✅Select 'Previous' or 'Next to scroll through individual students in the list
-  - 🚩Select a Student and click 'Add Assignment' button to input academic grade for a Student's performance on a test or homework assignment.
-  - 🚩To store the assignment information, we will use a LIST of GPAs (for the purposes of this assignment). GPAs will be an integer value. Student's GPA will be updated 🚩whenever teacher inputs assignment information.
-  - 🚩Each grade is weighed EVENLY both amongst other assignments, and across students, so that a student with two 3.8 scores will average 3.8 GPA, whereas a student with a 4.0 and a 3.0 will average 3.5 GPA (the lower of the two scores).
+  - ✅Select 'Previous' or 'Next' to scroll through individual students in the list
+  - 🔄️(update later bc not central to app) Select a Student and click 'Add Assignment' button to input academic grade for a Student's performance on a test or homework assignment.
+  - 🔄️(update later bc not central to app) To store the assignment information, we will use a LIST of GPAs (for the purposes of this assignment). GPAs will be an integer value. Student's GPA will be updated 🚩whenever teacher inputs assignment information.
+  - 🔄️(update later bc not central to app) Each grade is weighed EVENLY both amongst other assignments, and across students, so that a student with two 3.8 scores will average 3.8 GPA, whereas a student with a 4.0 and a 3.0 will average 3.5 GPA (the lower of the two scores).
 
 ## Design of Custom Data Types
 
 - **Models**
-  - 🚩Address (string streetAddress, string City, string Zip, method ToString)
-  - 🚩Contact (string telephone, string telephone, string email, string email, method ToString)
-  - 🚩GPA (int grade) [similar to real life 4.0=a, 3.0=b, 2.0=c, 1.0=d, etc, nothing higher than 4.0 allowed]
+  - 🔄️(update later bc not central to app) Address (string streetAddress, string City, string Zip, method ToString)
+  - 🔄️(update later bc not central to app) Contact (string telephone, string telephone, string email, string email, method ToString)
+  - 🔄️(update later bc not central to app) GPA (int grade) [similar to real life 4.0=a, 3.0=b, 2.0=c, 1.0=d, etc, nothing higher than 4.0 allowed]
   - 🚩User (string password, string username, string FirstName, string LastName, guid userid, Address address, Contact contact)
 	- 🚩Teacher : User
 	- 🚩Student : User (string MonthOfAdmission, int YearOfAdmission, int YearOfGraduation, LIST\<GPA\>)
 - **Services**
   - 🚩Password verification functionality
-  - 🚩Calculate avg GPA functionality
+  - 🔄️(update later bc not central to app) Calculate avg GPA functionality
   - 🚩Session Context (current user, changes when teacher selects different student in student details page, current teacher, changes when teacher logs onto/off system)
 	
 ## External Resources Required
@@ -63,7 +63,7 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 
 - ✅project Created
 - ✅Folders, files created
-- 🚩Separate mock data into its own file... required different declaration, referencing in student class/form
+- 🪙Separate mock data into its own file... required different declaration, referencing in student class/form
 - 🚩Outline changes that need to be made in already existing app files... 
 - 🚩pseudocode uncoded parts before coding...
 

@@ -6,16 +6,23 @@ namespace Assignment_4_2;
 public partial class StudentEditorForm : Form
 {
     private BindingSource _bindingSource = new BindingSource();
+    
     //private BindingList<Student> Students { get; set; }
     //private List<Student> mockDataStudents { get; set; }
 
     public StudentEditorForm()
     {
         InitializeComponent();
-        LoadDataAndSetupBindings(); 
+        LoadData();
+        SetupBindings(); 
     }
     // ------------------------------------------------------------
-    private void LoadDataAndSetupBindings()
+    private void LoadData()
+    {
+
+    }
+    // ------------------------------------------------------------
+    private void SetupBindings()
     {
         // 1. Generate mock datasource, generated with help from AI, from assignment 3_3
         var mockDataStudents = new List<Student>() {
