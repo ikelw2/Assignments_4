@@ -1,7 +1,7 @@
 ﻿
 #Mini-Learning Management System
 #Product Requirements Document (PRD)
-> [!NOTE] This document was last updated on 20260729 2020.
+> [!NOTE] This document was last updated on 20260729.
 
 
 ## Purpose / Problem Statement
