@@ -26,23 +26,23 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
   - (this app skips intermediate class details, for the sake of keeping it simple)
 
 - **STUDENT DETAILS PAGE** Teacher able to view list of all students, and edit details of individual students
-  - "Student details" form: textbox StudentId, textbox FirstName, textbox LastName, textbox MonthOfAdmission, textbox Address (for individual student data), and dataGridView (for seeing multiple student data at once).
-  - 🚩They will also be able to view student GPAs and click 'Get Highest GPA' button which saves to a output text file "HighestGPA.txt" (saved to working directory) the details of the student with the highest GPA.
-  - Select 'Add new' button to add a student, or 'Delete' button to delete student
-  - Select 'Previous' or 'Next to scroll through individual students in the list
+  - ✅"Student details" form: textbox StudentId, textbox FirstName, textbox LastName, textbox MonthOfAdmission, textbox Address (for individual student data), and dataGridView (for seeing multiple student data at once).
+  - 🚩They will also be able to view student GPAs and click 'Get Highest GPA' button which 🚩saves to a output text file "HighestGPA.txt" (saved to working directory) the details of the student with the highest GPA.
+  - ✅Select 'Add new' button to add a student, or 'Delete' button to delete student
+  - ✅Select 'Previous' or 'Next to scroll through individual students in the list
   - 🚩Select a Student and click 'Add Assignment' button to input academic grade for a Student's performance on a test or homework assignment.
-  - 🚩To store the assignment information, we will use a LIST of GPAs (for the purposes of this assignment). GPAs will be an integer value. Student's GPA will be updated whenever teacher inputs assignment information.
+  - 🚩To store the assignment information, we will use a LIST of GPAs (for the purposes of this assignment). GPAs will be an integer value. Student's GPA will be updated 🚩whenever teacher inputs assignment information.
   - 🚩Each grade is weighed EVENLY both amongst other assignments, and across students, so that a student with two 3.8 scores will average 3.8 GPA, whereas a student with a 4.0 and a 3.0 will average 3.5 GPA (the lower of the two scores).
 
 ## Design of Custom Data Types
 
 - **Models**
-  - Address (string streetAddress, string City, string Zip, method ToString)
-  - Contact (string telephone, string telephone, string email, string email, method ToString)
-  - GPA (int grade) [similar to real life 4.0=a, 3.0=b, 2.0=c, 1.0=d, etc, nothing higher than 4.0 allowed]
-  - User (string password, string username, string FirstName, string LastName, guid userid, Address address, Contact contact)
-	- Teacher : User
-	- Student : User (string MonthOfAdmission, int YearOfAdmission, int YearOfGraduation, LIST\<GPA\>)
+  - 🚩Address (string streetAddress, string City, string Zip, method ToString)
+  - 🚩Contact (string telephone, string telephone, string email, string email, method ToString)
+  - 🚩GPA (int grade) [similar to real life 4.0=a, 3.0=b, 2.0=c, 1.0=d, etc, nothing higher than 4.0 allowed]
+  - 🚩User (string password, string username, string FirstName, string LastName, guid userid, Address address, Contact contact)
+	- 🚩Teacher : User
+	- 🚩Student : User (string MonthOfAdmission, int YearOfAdmission, int YearOfGraduation, LIST\<GPA\>)
 - **Services**
   - 🚩Password verification functionality
   - 🚩Calculate avg GPA functionality
@@ -50,13 +50,28 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 	
 ## External Resources Required
 
-- nothing yet, this is free-standing app thus far
+- ✅nothing yet, this is free-standing app thus far
 
 ## Planned Developmental Timeline in Hours
 
-- Estimated 5 hours is probably a low estimate at time, because all the checkmarks and more I need to code, and some of them I'm not exactly sure how to do yet
+- Estimated 5 hours is probably a low estimate at time (I've put in 1 already), because all the checkmarks and more I need to code, and some of them I'm not exactly sure how to do yet
   - for example, I need to figure out how to show Student with sub-object Address, Contact, and GPA in the form, without it breaking my current code that allows me to view all details of a student at once, and also highlight a single student in a dataGridView at the same time...
 
+------------------
+
+## Pseudocode Implementation / Overall Progress
+
+- ✅project Created
+- ✅Folders, files created
+- 🚩Separate mock data into its own file... required different declaration, referencing in student class/form
+- 🚩Outline changes that need to be made in already existing app files... 
+- 🚩pseudocode uncoded parts before coding...
+
+## Functionality Resourcing / big tasks
+
+- 🚩implement password/authentication from downloaded source
+- 🚩Get file read/write from earlier assignments
+- 🚩Figure out how to show student overall GPA, and update individual LIST items, tbd
 
 
 
