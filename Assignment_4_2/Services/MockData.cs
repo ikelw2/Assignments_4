@@ -1,13 +1,15 @@
 ﻿using Assignment_4_2.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
-namespace Assignment_4_2;
+namespace Assignment_4_2.Services;
 
 internal class MockData
 {
-    public List<Student> getData()
+    internal BindingList<Student> StudentsBindingList { get; set; } // store Data for use elsewhere in the program
+    public MockData()
     {
         // mock datasource, generated with help from AI, from assignment 3_3
         var data = new List<Student>() {
@@ -22,6 +24,7 @@ internal class MockData
             new Student(109, "Alexander", "Rodriguez", "369 Ash Ave", Month.May, "3.1"),
             new Student(110, "Mason", "Wilson", "741 Walnut St", Month.March, "3.9")
             };
-        return data;
+
+        StudentsBindingList = new BindingList<Student>(data);
     }
 }

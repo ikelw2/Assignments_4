@@ -1,38 +1,73 @@
 using Assignment_4_2.Models;
+using Assignment_4_2.Services;
 using System.ComponentModel;
+using Assignment_4_2.Views;
 
 namespace Assignment_4_2;
 
 
 //
-// This is the StudentEditorForm, it represents the MAIN location where users (Teacher) will use the app
+// This is the StudentEditorForm, it represents the MAIN location where users (Teacher) will use the app.
 // 
 // 
-public partial class StudentEditorForm : Form
+public partial class StudentDetailsForm : Form
 {
-    private BindingSource _bindingSource = new BindingSource();
-    private BindingList<Student> Students { get; set; } // store Data inside this form
-    //private StudentInfo 
-
-    
-    public StudentEditorForm()
+    private BindingSource _bindingSource;// = new BindingSource();
+    public StudentDetailsForm() // perhaps more secure for this to take some sort of auth token, but that I don't know about
     {
         InitializeComponent();
-        LoadData();
-        SetupBindings(); 
+        LoadDataAndSetupBindings();
     }
     // ------------------------------------------------------------
-    private void LoadData()
-    {
+    //    InitializeComponent();
+    //
+    //    The below section is left indented because it contains the 'basic' method of running this
+    //    essentially if user does not authenticate the main form loads but no data is loaded...
+    //    The current app runs the login dialog box from the Program.cs main function, and ONLY if 
+    //    the user logs in successfully, then the main form StudentDetailsForm is loaded...
+    //
+    //    using (LoginForm loginForm = new LoginForm()) // use LoginForm safely with 'using' statement
+    //    {
+    //        // pauses execution until login form closes
+    //        DialogResult result = loginForm.ShowDialog();
 
-        MockData myMockData = new();
-        Students = new BindingList<Student>(myMockData.getData());
-    }
+    //        // check how the user exited the form
+    //        if (result == DialogResult.OK)
+    //        {
+    //            // safely read the value from the form before it is destroyed
+    //            bool authSuccess = loginForm.AuthenticationResult;
+    //            if (authSuccess)
+    //            {
+    //                // only load data if user successfully logged in 
+    //                this.Visible = true;
+    //                //this.Opacity = 100;
+    //                LoadDataAndSetupBindings();
+    //            }
+    //            else
+    //            {
+    //                MessageBox.Show("Authentication Failed.");
+    //                //this.Close(); // close app if can't authenticate
+    //                //Console.Beep();
+    //                //Application.Exit();
+    //            }
+    //        }
+    //        else
+    //        {
+    //            MessageBox.Show("Login cancelled by user.");
+    //            //this.Close(); // close app if can't authenticate
+    //            //Console.Beep();
+    //            //Application.Exit();
+    //        }
+    //    } // loginForm is automatically destroyed here
+    //}
     // ------------------------------------------------------------
-    private void SetupBindings()
+    private void LoadDataAndSetupBindings()
     {
-        // Attach the data collection to the bindingsource
-        _bindingSource.DataSource = Students;
+        // load data from mock data class
+        MockData myMockData = new(); 
+        // and bind it to _bindingSource
+        _bindingSource = new BindingSource();
+        _bindingSource.DataSource = myMockData.StudentsBindingList;
 
         // 3. Bind properties of your list object to the textbox controls    
         // update: added "true, DataSourceUpdateMode.OnPropertyChanged" 

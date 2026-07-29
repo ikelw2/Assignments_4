@@ -1,6 +1,6 @@
 ﻿namespace Assignment_4_2
 {
-    partial class StudentEditorForm
+    partial class StudentDetailsForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -195,7 +195,7 @@
             btnPrev.UseVisualStyleBackColor = true;
             btnPrev.Click += btnPrev_Click;
             // 
-            // StudentEditorForm
+            // StudentDetailsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -217,7 +217,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtStudentID);
-            Name = "StudentEditorForm";
+            Name = "StudentDetailsForm";
             Text = "Student Editor Form";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

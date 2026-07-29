@@ -40,14 +40,14 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
   - 🔄️(update later bc not central to app) Address (string streetAddress, string City, string Zip, method ToString)
   - 🔄️(update later bc not central to app) Contact (string telephone, string telephone, string email, string email, method ToString)
   - 🔄️(update later bc not central to app) GPA (int grade) [similar to real life 4.0=a, 3.0=b, 2.0=c, 1.0=d, etc, nothing higher than 4.0 allowed]
-  - 🚩User (string password, string username, string FirstName, string LastName, guid userid, Address address, Contact contact)
-	- 🚩Teacher : User
-	- 🚩Student : User (string MonthOfAdmission, int YearOfAdmission, int YearOfGraduation, LIST\<GPA\>)
+  - ✅User ✅(string password, ✅string username,✅ string FirstName, ✅string LastName, ✅guid userid, 🔄️Contact contact)
+	- ✅Teacher : ✅User
+	- ✅Student : ✅User (string ✅MonthOfAdmission, int 🔄️YearOfAdmission, int 🔄️YearOfGraduation, ✅Address address, int ✅GPA, LATER🔄️(LIST\<GPA\>) )
 - **Services**
-  - 🚩Password verification functionality
+  - 🪙Password verification functionality
   - 🔄️(update later bc not central to app) Calculate avg GPA functionality
   - 🚩Session Context (current user, changes when teacher selects different student in student details page, current teacher, changes when teacher logs onto/off system)
-  - 🪙StudentData - container class for data so data is fully separated from form... 
+  - ✅StudentData - container class for data so data is fully separated from form... 
 
 ## External Resources Required
 
@@ -64,21 +64,23 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 
 - ✅project Created
 - ✅Folders, files created
-- 🪙Separate mock data into its own file... required different declaration, referencing in student class/form
+- ✅Separate mock data into its own file... required different declaration, referencing in student class/form
 - 🚩Outline changes that need to be made in already existing app files... 
 - 🚩pseudocode uncoded parts before coding...
 
 ## Functionality Resourcing / big tasks
 
+- 🪙reorganize data in Student/Teacher/User for password and username, then after work on authentication function flow
 - 🚩implement password/authentication from downloaded source
 - 🚩Get file read/write from earlier assignments
 - 🚩Figure out how to show student overall GPA, and update individual LIST items, tbd
 
 
+<!-- Extra Icons:  🪙🚩✅ -->
 
+-----------------
 
-
-
+If anyone has any comments they want to add, please do so below this line:
 
 
 
