@@ -27,7 +27,7 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 
 - **STUDENT DETAILS PAGE** Teacher able to view list of all students, and edit details of individual students
   - ✅"Student details" form: textbox StudentId, textbox FirstName, textbox LastName, textbox MonthOfAdmission, textbox Address (for individual student data), and dataGridView (for seeing multiple student data at once).
-  - 🚩They will also be able to view student GPAs and click 'Get Highest GPA' button which 🚩saves to a output text file "HighestGPA.txt" (saved to working directory) the details of the student with the highest GPA.
+  - ✅They will also be able to view student GPAs and click 'Get Highest GPA' button which 🚩saves to a output text file "HighestGPA.txt" (saved to working directory) the details of the student with the highest GPA.
   - ✅Select 'Add new' button to add a student, or 'Delete' button to delete student
   - ✅Select 'Previous' or 'Next' to scroll through individual students in the list
   - 🔄️(update later bc not central to app) Select a Student and click 'Add Assignment' button to input academic grade for a Student's performance on a test or homework assignment.

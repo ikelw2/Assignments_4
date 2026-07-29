@@ -107,16 +107,47 @@ public partial class StudentDetailsForm : Form
         // to access data, use myMockStudentData.StudentsBindingList
         if (myMockStudentData.StudentsBindingList == null)
             return;
-        
-        Student valedictorian;
+
+        List<Student> valedictorians = new();
         if (myMockStudentData.StudentsBindingList.Any()) // if there is a Student in the StudentBindingList
         {
-            // Gets the entire student object with the highest grade
-            valedictorian = myMockStudentData.StudentsBindingList.MaxBy(s => s.StudentGPA);
-            // 3. Output the result
-            if (valedictorian != null)
+            // gets highest GPA amongst students
+            int highestGPA = myMockStudentData.StudentsBindingList.Max(s => s.StudentGPA);
+
+            foreach (Student candidate in myMockStudentData.StudentsBindingList)
             {
-                MessageBox.Show(valedictorian.ToString());
+                if (candidate.StudentGPA == highestGPA)
+                {
+                    valedictorians.Add(candidate);
+                }
+            }
+            // // below line commented out bc it only saves one valedictorian
+            //valedictorian = myMockStudentData.StudentsBindingList.MaxBy(s => s.StudentGPA);
+            
+            if (valedictorians != null)
+            {
+                if (valedictorians.Any()) // if there is at least one valedictorian
+                { 
+
+                    if (valedictorians.Count == 1) // if only one
+                    {
+                        MessageBox.Show("Congrats to " + valedictorians[0].ToString());
+                        
+                        // replace with output to file...
+                        // or display in separate dialog box..
+                    }
+                    else
+                    {
+                        // we have our valedictorians list...
+                        foreach (Student v in valedictorians)
+                        {
+                            MessageBox.Show("Congrats to " + v.ToString());
+                        }
+                        
+                        // replace with output to file...
+                        // or display in separate dialog box..
+                    }
+                }
             }
 
         }

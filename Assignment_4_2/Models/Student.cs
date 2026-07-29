@@ -9,10 +9,10 @@ internal class Student : User
     public int StudentId { get; set; }
     public Month MonthOfAdmission { get; set; }
     public string Address { get; set; }
-    public double StudentGPA { get; set; }
+    public int StudentGPA { get; set; }
 
     public Student() { }
-    public Student(int studentId, string firstName, string lastName, string address, Month monthOfAdmission = Month.January, double studentGPA = 3.0)
+    public Student(int studentId, string firstName, string lastName, string address, Month monthOfAdmission = Month.January, int studentGPA = 30)
     {  
         StudentId = studentId; 
         FirstName = firstName; 
