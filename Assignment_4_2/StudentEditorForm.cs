@@ -3,13 +3,18 @@ using System.ComponentModel;
 
 namespace Assignment_4_2;
 
+
+//
+// This is the StudentEditorForm, it represents the MAIN location where users (Teacher) will use the app
+// 
+// 
 public partial class StudentEditorForm : Form
 {
     private BindingSource _bindingSource = new BindingSource();
-    
-    //private BindingList<Student> Students { get; set; }
-    //private List<Student> mockDataStudents { get; set; }
+    private BindingList<Student> Students { get; set; } // store Data inside this form
+    //private StudentInfo 
 
+    
     public StudentEditorForm()
     {
         InitializeComponent();
@@ -20,30 +25,14 @@ public partial class StudentEditorForm : Form
     private void LoadData()
     {
 
+        MockData myMockData = new();
+        Students = new BindingList<Student>(myMockData.getData());
     }
     // ------------------------------------------------------------
     private void SetupBindings()
     {
-        // 1. Generate mock datasource, generated with help from AI, from assignment 3_3
-        var mockDataStudents = new List<Student>() {
-            new Student(101, "Liam", "Smith", "123 Maple St", Month.January, "3.4"),
-            new Student(102, "Noah", "Johnson", "456 Oak Ave", Month.March, "3.3"),
-            new Student(103, "Oliver", "Williams", "789 Pine Rd", Month.September, "2.8"),
-            new Student(104, "Elijah", "Brown", "321 Cedar Ln", Month.May, "4.0"),
-            new Student(105, "James", "Jones", "654 Spruce St", Month.July, "3.8"),
-            new Student(106, "Benjamin", "Miller", "987 Birch Blvd", Month.November, "2.6"),
-            new Student(107, "Lucas", "Davis", "147 Elm Dr", Month.January, "2.7"),
-            new Student(108, "Henry", "Garcia", "258 Willow Ct", Month.September, "3.2"),
-            new Student(109, "Alexander", "Rodriguez", "369 Ash Ave", Month.May, "3.1"),
-            new Student(110, "Mason", "Wilson", "741 Walnut St", Month.March, "3.9")
-            };
-
-        BindingList<Student> students = new BindingList<Student>(mockDataStudents);
-        //// 2. Attach your populated list into BindingSource container
-        //_bindingSource.DataSource = students;
-
         // Attach the data collection to the bindingsource
-        _bindingSource.DataSource = students;
+        _bindingSource.DataSource = Students;
 
         // 3. Bind properties of your list object to the textbox controls    
         // update: added "true, DataSourceUpdateMode.OnPropertyChanged" 

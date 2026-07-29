@@ -47,7 +47,8 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
   - 🚩Password verification functionality
   - 🔄️(update later bc not central to app) Calculate avg GPA functionality
   - 🚩Session Context (current user, changes when teacher selects different student in student details page, current teacher, changes when teacher logs onto/off system)
-	
+  - 🪙StudentData - container class for data so data is fully separated from form... 
+
 ## External Resources Required
 
 - ✅nothing yet, this is free-standing app thus far
