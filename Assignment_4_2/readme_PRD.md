@@ -18,11 +18,11 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 ## Preliminary Solution Structure
 
 - **LOGON PAGE** User (Teacher) opens app and encounters initial logon page
-  - 🚩"Logon" Dialog box: username textbox, password textbox, Enter button, cancel button
-  - Registered Teacher logs on using their username and password (new user registration occurs separately)
-  - 🚩Authentication credentials are validated by comparing to saved/secured usernames/passwords
-  - 🚩If authentication a 'go', teacher is logged in, assigned to session context, proceed to 'student details page'
-  - If not authenticated, remains on 'Logon page' shows messagebox of 'invalid credentials'
+  - ✅"Logon" Dialog box: username textbox, password textbox, Enter button, cancel button
+  - ✅Registered Teacher logs on using their username and password (new user registration occurs separately)
+  - ✅Authentication credentials are validated by comparing to saved/secured usernames/passwords
+  - ✅If authentication a 'go', teacher is logged in, assigned to session context, proceed to 'student details page'
+  - ✅If not authenticated, remains on 'Logon page' shows messagebox of 'invalid credentials'
   - (this app skips intermediate class details, for the sake of keeping it simple)
 
 - **STUDENT DETAILS PAGE** Teacher able to view list of all students, and edit details of individual students
@@ -65,22 +65,22 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 - ✅project Created
 - ✅Folders, files created
 - ✅Separate mock data into its own file... required different declaration, referencing in student class/form
-- 🚩Outline changes that need to be made in already existing app files... 
-- 🚩pseudocode new parts before coding...
+- 🪙Outline changes to existing files prior to refactoring... 
+- 🪙Pseudocode new sections prior to coding...
 
 ## Functionality Resourcing / big tasks
 
 - ✅reorganize data in Student/Teacher/User for password and username, then after work on authentication function flow
 - ✅implement password/authentication from downloaded source
-- 🚩Get file read/write from earlier assignments
-- 🚩Figure out how to show student overall GPA, and update individual LIST items, tbd
+- 🚩copy file read/write from earlier assignments
+- 🔄️Figure out how to show student overall GPA, and update individual LIST items, tbd
 
 
-<!-- Extra Icons:  🪙🚩✅ -->
+<!-- Extra Icons:   🪙 working on something     🚩 needs work      ✅ completed  -->
 
 -----------------
 
-If anyone has any comments they want to add, please do so below this line:
+If anyone has any comments they want to add, please do so here at the end:
 
 
 

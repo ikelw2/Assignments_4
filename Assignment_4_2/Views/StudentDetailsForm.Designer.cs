@@ -45,6 +45,7 @@
             dataGridView1 = new DataGridView();
             btnNext = new Button();
             btnPrev = new Button();
+            btnValedictorian = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -195,11 +196,22 @@
             btnPrev.UseVisualStyleBackColor = true;
             btnPrev.Click += btnPrev_Click;
             // 
+            // btnValedictorian
+            // 
+            btnValedictorian.Location = new Point(12, 342);
+            btnValedictorian.Name = "btnValedictorian";
+            btnValedictorian.Size = new Size(168, 29);
+            btnValedictorian.TabIndex = 14;
+            btnValedictorian.Text = "Who is the Valedictorian?";
+            btnValedictorian.UseVisualStyleBackColor = true;
+            btnValedictorian.Click += btnValedictorian_Click;
+            // 
             // StudentDetailsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(685, 349);
+            ClientSize = new Size(685, 383);
+            Controls.Add(btnValedictorian);
             Controls.Add(dataGridView1);
             Controls.Add(btnPrev);
             Controls.Add(btnAddNew);
@@ -243,5 +255,6 @@
         private DataGridView dataGridView1;
         private Button btnNext;
         private Button btnPrev;
+        private Button btnValedictorian;
     }
 }

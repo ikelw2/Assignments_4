@@ -9,10 +9,10 @@ internal class Student : User
     public int StudentId { get; set; }
     public Month MonthOfAdmission { get; set; }
     public string Address { get; set; }
-    public string StudentGPA { get; set; }
+    public double StudentGPA { get; set; }
 
     public Student() { }
-    public Student(int studentId, string firstName, string lastName, string address, Month monthOfAdmission = Month.January, string studentGPA = "4.0")
+    public Student(int studentId, string firstName, string lastName, string address, Month monthOfAdmission = Month.January, double studentGPA = 3.0)
     {  
         StudentId = studentId; 
         FirstName = firstName; 
@@ -20,6 +20,10 @@ internal class Student : User
         MonthOfAdmission = monthOfAdmission; 
         Address = address;
         StudentGPA = studentGPA;
+    }
+    public override string ToString()
+    {
+        return $"StudentId: {StudentId}, Name: {FirstName} {LastName}, GPA: {StudentGPA}";
     }
 
     public override bool SetPassword(string pwd) // required override since Student inherits from User

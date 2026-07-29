@@ -13,6 +13,7 @@ namespace Assignment_4_2;
 public partial class StudentDetailsForm : Form
 {
     private BindingSource _bindingSource;// = new BindingSource();
+    MockStudentData myMockStudentData;
     public StudentDetailsForm() // perhaps more secure for this to take some sort of auth token, but that I don't know about
     {
         InitializeComponent();
@@ -64,7 +65,7 @@ public partial class StudentDetailsForm : Form
     private void LoadDataAndSetupBindings()
     {
         // load data from mock data class
-        MockStudentData myMockStudentData = new(); 
+        myMockStudentData = new();
         // and bind it to _bindingSource
         _bindingSource = new BindingSource();
         _bindingSource.DataSource = myMockStudentData.StudentsBindingList;
@@ -88,7 +89,7 @@ public partial class StudentDetailsForm : Form
         // to keep the datasource on the same page, also allows for the record user is at to be selected, per next code line
         // ...
         // bind a complex control (like dataGridView1, assuming it exists on your form)
-        dataGridView1.DataSource = _bindingSource; 
+        dataGridView1.DataSource = _bindingSource;
         // //\\//\\ var viewablelist = new BindingList<Student>(Students); // previous method only showed the gridview
         // //\\//\\ dataGridView1.DataSource = viewablelist;
 
@@ -100,7 +101,30 @@ public partial class StudentDetailsForm : Form
         /// for the reactivity of dataGridView1 to work, Student.cs must inherit? from INotifyPropertyChanged object
         /// so edits to textboxes immediately reflect on dataGridView1, and vice versa?
     }
+    // ------------------------------------------------------------
+    private void btnValedictorian_Click(object sender, EventArgs e)
+    {
+        // to access data, use myMockStudentData.StudentsBindingList
+        if (myMockStudentData.StudentsBindingList == null)
+            return;
+        
+        Student valedictorian;
+        if (myMockStudentData.StudentsBindingList.Any()) // if there is a Student in the StudentBindingList
+        {
+            // Gets the entire student object with the highest grade
+            valedictorian = myMockStudentData.StudentsBindingList.MaxBy(s => s.StudentGPA);
+            // 3. Output the result
+            if (valedictorian != null)
+            {
+                MessageBox.Show(valedictorian.ToString());
+            }
 
+        }
+        else
+        {
+            MessageBox.Show("There are no students available");
+        }
+    }
     // ------------------------------------------------------------
     private void btnPrev_Click(object sender, EventArgs e)
     {
