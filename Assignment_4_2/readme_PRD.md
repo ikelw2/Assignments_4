@@ -44,9 +44,9 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 	- ✅Teacher : ✅User
 	- ✅Student : ✅User (string ✅MonthOfAdmission, int 🔄️YearOfAdmission, int 🔄️YearOfGraduation, ✅Address address, int ✅GPA, LATER🔄️(LIST\<GPA\>) )
 - **Services**
-  - 🪙Password verification functionality
+  - ✅Password verification functionality
   - 🔄️(update later bc not central to app) Calculate avg GPA functionality
-  - 🚩Session Context (current user, changes when teacher selects different student in student details page, current teacher, changes when teacher logs onto/off system)
+  - 🔄️Session Context (current user, changes when teacher selects different student in student details page, current teacher, changes when teacher logs onto/off system)
   - ✅StudentData - container class for data so data is fully separated from form... 
 
 ## External Resources Required
@@ -66,12 +66,12 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
 - ✅Folders, files created
 - ✅Separate mock data into its own file... required different declaration, referencing in student class/form
 - 🚩Outline changes that need to be made in already existing app files... 
-- 🚩pseudocode uncoded parts before coding...
+- 🚩pseudocode new parts before coding...
 
 ## Functionality Resourcing / big tasks
 
-- 🪙reorganize data in Student/Teacher/User for password and username, then after work on authentication function flow
-- 🚩implement password/authentication from downloaded source
+- ✅reorganize data in Student/Teacher/User for password and username, then after work on authentication function flow
+- ✅implement password/authentication from downloaded source
 - 🚩Get file read/write from earlier assignments
 - 🚩Figure out how to show student overall GPA, and update individual LIST items, tbd
 

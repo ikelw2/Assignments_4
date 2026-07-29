@@ -15,6 +15,7 @@ internal class Teacher : User
         TeacherId = teacherId;
         FirstName = firstName;
         LastName = lastName;
+        Address = address;
     }
 
     public override bool SetPassword(string pwd) // required override since Student inherits from User

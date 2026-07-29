@@ -6,13 +6,13 @@ using System.Text;
 
 namespace Assignment_4_2.Services;
 
-internal class MockData
+internal class MockStudentData
 {
     internal BindingList<Student> StudentsBindingList { get; set; } // store Data for use elsewhere in the program
-    public MockData()
+    public MockStudentData()
     {
         // mock datasource, generated with help from AI, from assignment 3_3
-        var data = new List<Student>() {
+        var studentData = new List<Student>() {
             new Student(101, "Liam", "Smith", "123 Maple St", Month.January, "3.4"),
             new Student(102, "Noah", "Johnson", "456 Oak Ave", Month.March, "3.3"),
             new Student(103, "Oliver", "Williams", "789 Pine Rd", Month.September, "2.8"),
@@ -25,6 +25,6 @@ internal class MockData
             new Student(110, "Mason", "Wilson", "741 Walnut St", Month.March, "3.9")
             };
 
-        StudentsBindingList = new BindingList<Student>(data);
+        StudentsBindingList = new BindingList<Student>(studentData);
     }
 }

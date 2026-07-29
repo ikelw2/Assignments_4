@@ -64,10 +64,10 @@ public partial class StudentDetailsForm : Form
     private void LoadDataAndSetupBindings()
     {
         // load data from mock data class
-        MockData myMockData = new(); 
+        MockStudentData myMockStudentData = new(); 
         // and bind it to _bindingSource
         _bindingSource = new BindingSource();
-        _bindingSource.DataSource = myMockData.StudentsBindingList;
+        _bindingSource.DataSource = myMockStudentData.StudentsBindingList;
 
         // 3. Bind properties of your list object to the textbox controls    
         // update: added "true, DataSourceUpdateMode.OnPropertyChanged" 
