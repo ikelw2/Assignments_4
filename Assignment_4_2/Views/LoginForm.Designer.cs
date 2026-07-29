@@ -42,9 +42,9 @@
             btnLogon.Name = "btnLogon";
             btnLogon.Size = new Size(75, 23);
             btnLogon.TabIndex = 3;
-            btnLogon.Text = "Logon";
+            btnLogon.Text = "Login";
             btnLogon.UseVisualStyleBackColor = true;
-            btnLogon.Click += btnLogon_Click;
+            btnLogon.Click += btnLogin_Click;
             // 
             // btnExit
             // 
@@ -107,7 +107,7 @@
             MinimizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Logon To LMS";
+            Text = "Login To LMS";
             ResumeLayout(false);
             PerformLayout();
         }

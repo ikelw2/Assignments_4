@@ -8,6 +8,7 @@ internal static class Program
     ///  The main entry point for the application.
     /// </summary>
     [STAThread]
+    //--------------------------------
     static void Main()
     {
         // To customize application configuration such as set high DPI settings or default font,
@@ -15,35 +16,42 @@ internal static class Program
         ApplicationConfiguration.Initialize();
 
 
-        bool authSuccess  = false;
-        using (LoginForm loginForm = new LoginForm()) // use LoginForm safely with 'using' statement
+        // step 1, show Login form
+        bool authSuccess = false;
+        bool attemptedLogin = true;
+        using (LoginForm loginForm = new LoginForm())
         {
-            // pauses execution until login form closes
+            // save result after login form closes
             DialogResult result = loginForm.ShowDialog();
 
-            // check how the user exited the form
+            // if user closed form by clicking 'Login' // see LoginForm.cs for this
             if (result == DialogResult.OK)
             {
-                // safely read the value from the form before it is destroyed
+                // save authSuccess locally from loginForm.AuthenticationReesult
                 authSuccess = loginForm.AuthenticationResult;
+                attemptedLogin = true;
             }
             else
             {
-                //MessageBox.Show("Login cancelled by user.");
+                attemptedLogin = false;
             }
         } // loginForm is automatically destroyed here
 
 
+        // step 2, if authSuccess, run the StudentDetailsForm
         if (authSuccess)
         {
-            //MessageBox.Show("---authSuccess");
-            
-            // only load data if user successfully logged in 
+            //MessageBox.Show("---authSuccess"); // useful debug feature
             Application.Run(new StudentDetailsForm());
         }
         else
         {
-            MessageBox.Show("Authentication Failed.");
+            if (attemptedLogin)
+            {
+                MessageBox.Show("Authentication Failed.");
+                // simply close app if user auth failed
+            }
         }
     }
+    //--------------------------------
 }

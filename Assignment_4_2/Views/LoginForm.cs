@@ -22,7 +22,7 @@ public partial class LoginForm : Form
         InitializeComponent();
     }
     //---------------------------
-    private void btnLogon_Click(object sender, EventArgs e)
+    private void btnLogin_Click(object sender, EventArgs e)
     {
         // load data from mock teacher data class
         MockTeacherData myMockTeacherData = new();
