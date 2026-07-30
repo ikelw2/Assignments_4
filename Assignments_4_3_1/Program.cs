@@ -13,19 +13,30 @@ while (true)
     // charge sheet values)
     //
 
-    string custId = AnsiConsole.Prompt(new TextPrompt<string>("Please enter your ID number: "));
-    string custName = AnsiConsole.Prompt(new TextPrompt<string>("Please enter your Name: "));
-    int kwUnits = AnsiConsole.Prompt(new TextPrompt<int>("Please enter total whole kw units used: "));
+    Console.Write("Please enter your ID number: ");
+    string custId = Console.ReadLine();
+                        //string custId = AnsiConsole.Prompt(new TextPrompt<string>("Please enter your ID number: "));
+    
+    Console.Write("Please enter your Name: ");
+    string custName = Console.ReadLine();
+                        //string custName = AnsiConsole.Prompt(new TextPrompt<string>("Please enter your Name: "));
+    
+    Console.Write("Please enter total whole kw units used: ");
+    int kwUnits = Convert.ToInt32(Console.ReadLine());
+                        //int kwUnits = AnsiConsole.Prompt(new TextPrompt<int>("Please enter total whole kw units used: "));
+    
     int origUnits = kwUnits;
+    Console.WriteLine();
+
 
 
     double t = 0.0; // running Total
-    // step 1 handle 2.00 rate for between 600 and more units
+    // step 1 handle 2.00 rate for 600 and higher units
     if (kwUnits > 599)
     {
         t += (2.00 * (kwUnits - 599));
         kwUnits = 599;
-        AnsiConsole.MarkupLine($"\n[gray]    $2.00 @ >599 subtotal: [/][green]${t:N2}[/]");
+                            AnsiConsole.MarkupLine($"[gray]    $2.00 @ >599 subtotal: [/][green]{t:c}[/]");
     }
 
     // step 2 handle 1.80 rate for between 400-599 units
@@ -33,7 +44,7 @@ while (true)
     {
         t += (1.80 * (kwUnits - 399));
         kwUnits = 399;
-        AnsiConsole.MarkupLine($"[gray]    $1.80 @ >399 subtotal: [/][green]${t:N2}[/]");
+                            AnsiConsole.MarkupLine($"[gray]    $1.80 @ >399 subtotal: [/][green]{t:c}[/]");
     }
 
     // step 3 handle 1.50 rate for between 200-399 units
@@ -41,7 +52,7 @@ while (true)
     {
         t += (1.50 * (kwUnits - 199));
         kwUnits = 199;
-        AnsiConsole.MarkupLine($"[gray]    $1.50 @ >199 subtotal: [/][green]${t:N2}[/]");
+                            AnsiConsole.MarkupLine($"[gray]    $1.50 @ >199 subtotal: [/][green]{t:c}[/]");
     }
 
     // step 4 handle 1.20 rate for between 1-199 units
@@ -49,21 +60,21 @@ while (true)
     {
         t += (1.20 * (kwUnits - 0));
         kwUnits = 0;
-        AnsiConsole.MarkupLine($"[gray]    $1.20 @ >000 subtotal: [/][green]${t:N2}[/]");
+                            AnsiConsole.MarkupLine($"[gray]    $1.20 @ >000 subtotal: [/][green]{t:c}[/]");
     }
 
     // step 5 if bill over 400$ charge an extra 0.15
     if (t > 400.00)
     {
         t *= 1.15;
-        AnsiConsole.MarkupLine($"[gray]    +%15 @ >$400 subtotal: [/][green]${t:N2}[/]\n");
+                            AnsiConsole.MarkupLine($"[gray]    +%15 @ >$400 subtotal: [/][green]{t:c}[/]");
     }
 
     // display output
-    AnsiConsole.MarkupLine($"Cust ID:    {custId}");
-    AnsiConsole.MarkupLine($"Cust Name:  {custName}");
-    AnsiConsole.MarkupLine($"Units used: {origUnits}");
-    AnsiConsole.MarkupLine($"Total Paid: ${t:N2}");
+    Console.WriteLine($"\nCust ID:    {custId}");
+    Console.WriteLine($"Cust Name:  {custName}");
+    Console.WriteLine($"Units used: {origUnits}");
+    Console.WriteLine($"Total Paid: {t:c}");
 
 
 
