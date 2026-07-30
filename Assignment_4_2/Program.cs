@@ -16,7 +16,7 @@ internal static class Program
         ApplicationConfiguration.Initialize();
 
 
-        // step 1, show Login form
+        // step 1, show Login form, sample credentials: sconner99 SecurePassword1! 
         bool authSuccess = false;
         bool attemptedLogin = true;
         using (LoginForm loginForm = new LoginForm())

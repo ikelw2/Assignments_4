@@ -31,7 +31,7 @@ We will use C# to create a .NET Winforms app, targeting .NET version 10.
   - ✅Select 'Add new' button to add a student, or 'Delete' button to delete student
   - ✅Select 'Previous' or 'Next' to scroll through individual students in the list
   - 🔄️(update later bc not central to app) Select a Student and click 'Add Assignment' button to input academic grade for a Student's performance on a test or homework assignment.
-  - 🔄️(update later bc not central to app) To store the assignment information, we will use a LIST of GPAs (for the purposes of this assignment). GPAs will be an integer value. Student's GPA will be updated 🚩whenever teacher inputs assignment information.
+  - 🔄️(update later bc not central to app) To store the assignment information, we will use a LIST of GPAs (for the purposes of this assignment). GPAs will be an integer value. Student's GPA will be updated 🔄️whenever teacher inputs assignment information.
   - 🔄️(update later bc not central to app) Each grade is weighed EVENLY both amongst other assignments, and across students, so that a student with two 3.8 scores will average 3.8 GPA, whereas a student with a 4.0 and a 3.0 will average 3.5 GPA (the lower of the two scores).
 
 ## Design of Custom Data Types
